@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+<id>com.marrily.activerecord</id>
+<name>activerecord</name>
+<version>1.0</version>
+<publisher>sr3d</publisher>
+<url>http://www.marrily.com</url>
+<description>No description provided</description>
+<copyright>2010 by sr3d</copyright>
+<icon>default_app_logo.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <analytics>true</analytics>
+<guid>129a9dfb-39d3-45d7-823e-c25a6a06a360</guid>
+</ti:app>
