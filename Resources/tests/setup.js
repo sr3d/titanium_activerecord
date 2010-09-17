@@ -1,0 +1,34 @@
+function log(msg) { 
+  Ti.API.debug(msg);
+};
+
+function assert(obj, msg) { 
+  if( !obj ) {
+    throw msg;
+  };
+};
+
+function assertEqual(expected, actual, msg) {
+  if( expected != actual ) {
+    throw new Error("Expected " + expected + 'but got' + actual);
+  }
+};
+
+
+Benchmark = function( msg, block ) {
+  var startTime = (new Date()).getTime();
+  block();
+  var endTime   = (new Date()).getTime();
+  log( msg + " takes " + (endTime - startTime) + 'ms' ); 
+};
+
+// include the dist version
+// cd into activerecord folder, run
+// rake dist to build
+Ti.include('../../activejs/assets/downloads/active_record.js');
+
+ActiveRecord.logging  = true;
+ActiveSupport.log     = Ti.API.debug; // alias to logger ...    
+
+
+log('done setup.js');
