@@ -10,7 +10,7 @@ var tabGroup = Titanium.UI.createTabGroup();
 //
 var win1 = Titanium.UI.createWindow({  
     title:'ActiveRecord Test Suite',
-    backgroundColor:'#fff'
+    backgroundColor:'white'
 });
 var tab1 = Titanium.UI.createTab({  
     icon:'KS_nav_views.png',
@@ -21,6 +21,18 @@ var tab1 = Titanium.UI.createTab({
 var data = [
   { title: "Open Database", url: 'tests/open_database.js' },
   { title: "Basic", url: 'tests/basic.js' },
+  { title: "Callbacks", url: 'tests/callbacks.js' },
+  { title: "Date", url: 'tests/date.js' },
+  { title: "Finder", url: 'tests/finders.js' },
+  { title: "Indicies", url: 'tests/indicies.js' },
+  { title: "Migrations", url: 'tests/migrations.js' },
+  { title: "Relationships", url: 'tests/relationships.js' },
+  { title: "Serialization", url: 'tests/serialization.js' },
+  { title: "Synchronization", url: 'tests/synchronization.js' },
+  { title: "Transactions", url: 'tests/transactions.js' },
+  { title: "Validations", url: 'tests/validations.js' },
+  
+  { title: "Benchmark", url: 'tests/benchmark.js' },
 ];
 
 var tableView = Ti.UI.createTableView({
@@ -36,7 +48,6 @@ win1.add(tableView);
 
 
 tabGroup.addTab(tab1);  
-// tabGroup.addTab(tab2);  
 
 
 // open tab group

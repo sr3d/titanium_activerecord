@@ -3,11 +3,16 @@
   $ rake dist to build
 */
 Ti.include('test_helper.js');
-Ti.include('../../activejs/assets/downloads/active_record.js');
+Ti.include('../../activejs-1584174/dist/active_record.js');
 
-ActiveRecord.logging  = true;
-ActiveRecord.autoMigrate = true;
-ActiveSupport.log     = Ti.API.debug;
+var win = Ti.UI.currentWindow
+
+
+ActiveRecord.logging      = true;
+// ActiveRecord.autoMigrate  = true;
+ActiveSupport.log         = Ti.API.debug;
+
+/* Set the Adapter to Titanium and connect to the defauly 'app.sqlite' database */
 ActiveRecord.connect(ActiveRecord.Adapters.Titanium);
 
 
@@ -158,6 +163,3 @@ var Reserved = ActiveRecord.create('reserved',{
     from: '',
     select: ''
 });
-
-
-log('done setup.js');
