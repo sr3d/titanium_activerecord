@@ -1,6 +1,6 @@
 ActiveRecord - Titanium
 =======================
-This is the test Titanium Application to verify that the Titanium ActiveRecord adapter for ActiveJS is working properly.
+This is the test Titanium Application to verify that the Titanium ActiveRecord adapter for ActiveJS is working properly.  Here is the [link](http://github.com/sr3d/activejs-1584174) to the main repository for the ActiveJS fork.
 
 <img src="http://cl.ly/efd83fc8696da14f21d5/content">
 
@@ -9,6 +9,7 @@ The test suite is almost a direct copy/paste from the ActiveJS's test suite.  Cu
 - Finder's Callback
 - Migration
 
+I don't think the callback is that critical, so it can safely be ignored.  For the migration, I probably need some more time to look into it.  But for now it can also safely be ignored.
 
 If you want to browse the source code quickly, use [GithubFinder](http://sr3d.github.com/GithubFinder/?utm_source=titanium_activerecord&user_id=sr3d&repo=titanium_activerecord&branch=master)
 
@@ -86,17 +87,17 @@ The app has been compiled successfully with Titanium Developer 1.2.1 with 1.4.0 
 
 You don't need to initialize the activejs submodule in order to compile the app.  However, if you need to hack, then here are the steps:
 
-1.  Init the submodules
+- Init the submodules
 
     $ gh submodule init
     $ gh submodule update
 
 Remember to install the github gem (gem install github).  I could only get this gem to work in ruby 1.8.7 so rvm came to the rescue.
 
-2.  Build the active_record.js file: cd into the activejs-1584174 folder and run
+-  Build the active_record.js file: cd into the activejs-1584174 folder and run
 
     rake dist
-    
+
 This will build the files and copy the active_record.js to the dist folder.  I just update the Rakefile to automatically copy the compiled file to the /Resources/test/ folder (however this file is not committed in since the activejs-1584174 folder is another github repo).
 
     task :dist, :copy_locations do |task,arguments|
