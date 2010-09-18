@@ -12,12 +12,14 @@ The test suite is almost a direct copy/paste from the ActiveJS's test suite.  Cu
 
 If you want to browse the source code quickly, use [GithubFinder](http://sr3d.github.com/GithubFinder/?utm_source=titanium_activerecord&user_id=sr3d&repo=titanium_activerecord&branch=master)
 
-[<img src="http://cl.ly/307e03db6d3bf380da47"](http://sr3d.github.com/GithubFinder/?utm_source=titanium_activerecord&user_id=sr3d&repo=titanium_activerecord&branch=master)
+[<img src="http://cl.ly/307e03db6d3bf380da47">](http://sr3d.github.com/GithubFinder/?utm_source=titanium_activerecord&user_id=sr3d&repo=titanium_activerecord&branch=master)
 
 
 Download and Usage
 ==================
 Drop the [active_record.js](http://github.com/sr3d/titanium_activerecord/raw/master/Resources/tests/active_record.js) file into your Titanium project and include it.
+
+    Ti.include('path/to/active_record.js');
 
 To initialize ActiveRecord:
 
@@ -64,12 +66,12 @@ and to find abbey:
     User.findByName('Abbey');
 
 
-Please refer to the test's suite source under Resources/tests/, and especially the setup.js file. 
+Please refer to the test's suite source under Resources/tests/, and especially the [setup.js](http://github.com/sr3d/titanium_activerecord/blob/master/Resources/tests/setup.js) file. 
   
 
 Benchmark
 =========
-I also throw in a benchmark test to see how much of a performance hit it is.  It's about 4 times slower for SELECT (since it needs to re-construct the object), and 1.20 times slower for CREATE.
+I also throw in a benchmark test to see how much of a performance hit it is.  It's about 4 times slower for SELECT (since it needs to re-construct the objects), and 1.20 times slower for CREATE.
 
 
     [DEBUG] ActiveRecord CREATE takes 2355ms
@@ -84,12 +86,14 @@ The app has been compiled successfully with Titanium Developer 1.2.1 with 1.4.0 
 
 You don't need to initialize the activejs submodule in order to compile the app.  However, if you need to hack, then here are the steps:
 
+1.  Init the submodules
+
     $ gh submodule init
     $ gh submodule update
 
 Remember to install the github gem (gem install github).  I could only get this gem to work in ruby 1.8.7 so rvm came to the rescue.
 
-To build the active_record.js file, cd into the activejs-1584174 folder and run
+2.  Build the active_record.js file: cd into the activejs-1584174 folder and run
 
     rake dist
     
