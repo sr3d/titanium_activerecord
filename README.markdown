@@ -12,7 +12,7 @@ The test suite is almost a direct copy/paste from the ActiveJS's test suite.  Cu
 
 If you want to browse the source code quickly, use [GithubFinder](http://sr3d.github.com/GithubFinder/?utm_source=titanium_activerecord&user_id=sr3d&repo=titanium_activerecord&branch=master)
 
-[<img src="http://cl.ly/307e03db6d3bf380da47">](http://sr3d.github.com/GithubFinder/?utm_source=titanium_activerecord&user_id=sr3d&repo=titanium_activerecord&branch=master)
+[<img src="http://cl.ly/307e03db6d3bf380da47/content">](http://sr3d.github.com/GithubFinder/?utm_source=titanium_activerecord&user_id=sr3d&repo=titanium_activerecord&branch=master)
 
 
 Download and Usage
