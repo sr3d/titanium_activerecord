@@ -1,3 +1,6 @@
 [submodule "activejs"]
 	path = activejs
 	url = git://github.com/sr3d/activejs.git
+[submodule "activejs-1584174"]
+	path = activejs-1584174
+	url = https://sr3d@github.com/sr3d/activejs-1584174.git
